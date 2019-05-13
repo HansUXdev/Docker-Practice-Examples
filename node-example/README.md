@@ -18,3 +18,10 @@ volumes: ['./:/usr/src/app']
 # To re-build
 docker-compose build
 ```
+
+
+
+
+## Things added that were not part of the original tutorials
+1. mongo-express
+This is an admin panel for mongodb kinda like phpmyadmin. I makes it easier for us to manage collections and various stuff when prototyping an app. It should either be removed in production or require an authentication if used in production so keep that in mind.
