@@ -5,6 +5,7 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 
 RUN npm install
+  # run nginx -t to check for syntex errors?
 
 COPY . .
 
