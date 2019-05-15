@@ -13,6 +13,6 @@ A simple collection of docker related projects a few simple docker projects and 
 
 # References / Credits
 
-[Docker tutorials from Brad t](https://www.youtube.com/watch?v=hP77Rua1E0c)
+[Docker tutorials from Brad Traversy](https://www.youtube.com/watch?v=Kyx2PsuwomE&list=PLillGF-Rfqbb6vZqT-Lzi9Al_noaY5LAs)
 [Raspberry Pi Server](https://www.youtube.com/watch?v=hP77Rua1E0c)
 [nginx with docker](https://dev.to/domysee/setting-up-a-reverse-proxy-with-nginx-and-docker-compose-29jg)
