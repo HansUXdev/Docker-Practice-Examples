@@ -2,7 +2,7 @@ version: '3'
 services:
   # https://dev.to/domysee/setting-up-a-reverse-proxy-with-nginx-and-docker-compose-29jg
   nginx: 
-    image: nginx:latest
+    image: nginx:1.16
     container_name: production_nginx
     # Files you need to customize for nginx
     volumes:
