@@ -55,6 +55,9 @@ define( 'SECURE_AUTH_SALT', 'put your unique phrase here' );
 define( 'LOGGED_IN_SALT',   'put your unique phrase here' );
 define( 'NONCE_SALT',       'put your unique phrase here' );
 
+define('JWT_AUTH_SECRET_KEY', 'secret');
+
+define('JWT_AUTH_CORS_ENABLE', true);
 /**#@-*/
 
 /**
