@@ -76,3 +76,37 @@ It should now be viewable at `localhost:777/`
 
 
 
+# Working with the db
+Make sure both .env files have matching db info `LAMP7-laraval/.env` & `LAMP7-laraval/www/photogallery/.env`.
+
+Run `php artisan make:migration create_galleries_table --create=galleries` & `php artisan make:migration create_photos_table --create=photos`.
+
+Check `LAMP7-laraval/www/photogallery/database/migrations/..._create_galleries_table.php`.
+
+Lets edit the file.
+For create_galleries_table.php:
+```
+    $table->increments('id');
+    $table->string('name');
+    $table->string('description');
+    $table->string('cover_image');
+    $table->integer('owner_id');
+    $table->timestamps();
+```
+For create_photos_table.php:
+```
+    $table->increments('id');
+    $table->string('title');
+    $table->string('description');
+    $table->string('location');
+    $table->string('images');
+    $table->integer('owner_id');
+    $table->timestamps();
+```
+Goto phpmyadmin: `http://localhost:8080` notice how there are no tables in there?
+
+Now lets actually run the migrate  `php artisan migrate`. This will build the sql tables for you.
+
+Refresh phpmyadmin: `http://localhost:8080` and notices how the tables have been built out?
+
+
