@@ -6,8 +6,18 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
-class PhotoController extends Controller
+class PhotoTestController extends Controller
 {
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        die('GALLERY/INDEX'); 
+        //
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -16,7 +26,7 @@ class PhotoController extends Controller
      */
     public function create()
     {
-        die('PHOTOS/CREATE'); 
+        die('GALLERY/CREATE'); 
     }
 
     /**
@@ -27,7 +37,7 @@ class PhotoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        die('GALLERY/STORE'); 
     }
 
     /**
@@ -36,11 +46,9 @@ class PhotoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function details($id)
-    {
-        //
+    public function show( $id) {
         die($id); 
-    }
+    } 
 
     /**
      * Show the form for editing the specified resource.
@@ -51,6 +59,7 @@ class PhotoController extends Controller
     public function edit($id)
     {
         //
+        die('GALLERY/EDIT'); 
     }
 
     /**
@@ -63,6 +72,7 @@ class PhotoController extends Controller
     public function update(Request $request, $id)
     {
         //
+        die('GALLERY/UPDATE'); 
     }
 
     /**
@@ -74,5 +84,6 @@ class PhotoController extends Controller
     public function destroy($id)
     {
         //
+        die('GALLERY/DESTROY/'.$id); 
     }
 }

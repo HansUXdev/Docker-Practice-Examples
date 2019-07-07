@@ -18,10 +18,12 @@ class GalleryController extends Controller
     }
     // store it
     public function store(Request $request) {
-        die('GALLERY/CREATE'); 
+        die('GALLERY/STORE'); 
     } 
     // show gallery
     public function show( $id) {
         die($id); 
     } 
 }
+
+// php artisan make:controller PhotoTestController --resource

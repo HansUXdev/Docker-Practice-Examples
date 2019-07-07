@@ -1,6 +1,8 @@
 # Get docker working
+You should know the drill by now...
 
 # Install Laraval
+[composer install](https://getcomposer.org/doc/03-cli.md#install-i)
 `cd /www/ && composer create-project --prefer-dist laravel/laravel photogallery`
 
 # View the site
@@ -8,20 +10,17 @@
 
 # Update apache config
 change config/vhost/default.conf from `/var/www/html/` to `/var/www/html/photogallery/public/`
+It should now be viewable at `localhost:777/`
+
 
 # Creating out first [controllers](https://laravel.com/docs/5.8/controllers)
 These will be made in `photogallery/app/Http/Controllers`
 `php artisan make:controller GalleryController`
-`php artisan make:controller PhotoController`
 
 Edit them:
 ```
     public function index() {
         die('Gallery Index'); 
-    }
-
-    public function create() {
-        die('Gallery CREATE'); 
     }
 ```
 
@@ -54,15 +53,20 @@ Route::resource('photo', 'PhotoController');
     } 
     // show gallery
     public function show( $id) {
-        die($); 
+        die($id); 
     } 
 ```
 
 
 ## Edit Router
+`Route::get('/gallery/show/{id}', 'GalleryController@show');`
 
 
 
-
-
-
+## Automating this
+This could also have been done with following
+`php artisan make:controller PhotoTestController --resource`
+Then back in the `routes.php`, we add:
+```
+Route::resource('test', 'PhotoTestController');
+```
