@@ -110,3 +110,16 @@ Now lets actually run the migrate  `php artisan migrate`. This will build the sq
 Refresh phpmyadmin: `http://localhost:8080` and notices how the tables have been built out?
 
 
+## add laravelcollective (not maintained)
+update composer.json
+```
+"laravelcollective/html": "5.0"
+```
+then `composer update`.
+
+Add your new provider to the `providers` array of `config/app.php`:
+`Collective\Html\HtmlServiceProvider::class,` around line 149.
+
+Then add update a new alias ro the aliases array:
+`'Html' => Collective\Html\HtmlFacade::class,`
+
