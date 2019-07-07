@@ -72,7 +72,7 @@ By default following modules are enabled.
 You can connect to web server using `docker exec` command to perform various operation on it. Use below command to login to container via ssh.
 
 ```shell
-docker exec -it 7.2.x-webserver /bin/bash
+docker exec -it apache /bin/bash
 ```
 
 ## PHP
