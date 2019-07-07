@@ -10,11 +10,11 @@ class GalleryController extends Controller
 {
     // List galleries
     public function index() {
-        die('GALLERY/INDEX'); 
+        return view('gallery/index'); 
     }
     // show create form
     public function create() {
-        die('GALLERY/CREATE'); 
+        return view('gallery/create'); 
     }
     // store it
     public function store(Request $request) {
