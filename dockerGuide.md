@@ -1,5 +1,11 @@
 # Docker Commands, Help & Tips
 
+### General Terminal Commands
+
+## List Open Ports
+`lsof -nP +c 15 | grep LISTEN`
+
+
 ### Show commands & management commands
 
 ```
